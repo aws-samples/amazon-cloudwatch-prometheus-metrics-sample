@@ -1,11 +1,6 @@
-## My Project
+## CloudWatch Prometheus metrics and logs ingestion
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+The repo contains a sample ASP.NET Core application exposing Prometheus metrics and configuration to show case custom Prometheus metric ingestion into CloudWatch.
 
 ## License
 
