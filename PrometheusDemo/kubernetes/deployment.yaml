@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: promdemo
+  labels:
+    app: promdemo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: promdemo
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: promdemo
+    spec:
+      containers:
+      - image: <YOUR_CONTAINER_REPO>/prometheusdemo:latest  
+        imagePullPolicy: Always
+        name: promdemo
+        ports:
+        - containerPort: 80
+          protocol: TCP
