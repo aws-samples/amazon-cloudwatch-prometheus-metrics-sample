@@ -61,9 +61,6 @@ Resources:
       Description: !Sub 'CWAgent SSM Parameter with App Mesh and Java EMF Definition for ECS Cluster: ${ECSClusterName}'
       Value: |-
         {
-          "agent": {
-            "debug": true
-          },
           "logs": {
             "metrics_collected": {
               "prometheus": {
